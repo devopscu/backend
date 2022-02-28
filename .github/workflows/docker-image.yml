@@ -23,6 +23,9 @@ jobs:
           docker build -t devopscu/backend:latest .
           docker images
           docker push devopscu/backend:latest
+      - name: Push image
+        run: |
+          docker push devopscu/backend:latest
 
   deploy:
     name: Deploy to Server

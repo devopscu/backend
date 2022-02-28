@@ -1,0 +1,16 @@
+# docker-compose.yml
+version: "3"
+services:
+  backend:
+    image: makdeniz123/devops-backend
+    container_name: "devops-backend"
+    restart: always
+    environment:
+      MONGO_PROTOKOL: "mongodb+srv://"
+      MONGO_HOST: cluster0.frgtf.mongodb.net
+      MONGO_USER: murat
+      MONGO_PASSWORD: password
+      MONGO_DB: database_name 
+      TZ: "Europe/Istanbul"
+    ports:
+      - 8081:3000

@@ -2,8 +2,8 @@
 version: "3"
 services:
   backend:
-    image: makdeniz123/devops-backend
-    container_name: "devops-backend"
+    image: devopscu/backend:latest
+    container_name: "devopscu-backend"
     restart: always
     environment:
       MONGO_PROTOKOL: "mongodb+srv://"

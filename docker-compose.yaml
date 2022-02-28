@@ -6,11 +6,7 @@ services:
     container_name: "devopscu-backend"
     restart: always
     environment:
-      MONGO_PROTOKOL: "mongodb+srv://"
-      MONGO_HOST: cluster0.frgtf.mongodb.net
-      MONGO_USER: murat
-      MONGO_PASSWORD: password
-      MONGO_DB: database_name 
+      MongoURL: mongodb+srv://devopscu:devopscu_read_user@cluster0.8iqoa.mongodb.net/dbbackend
       TZ: "Europe/Istanbul"
     ports:
       - 8081:3000

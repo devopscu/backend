@@ -28,7 +28,7 @@ db.on("connecting", function () {
   })
   .on("disconnected", function () {
     console.log("MongoDB disconnected!");
-    mongoose.connect(config.MongoURL(), {
+    mongoose.connect(process.env.MongoURL, {
       useUnifiedTopology: true,
       useNewUrlParser: true,
     });

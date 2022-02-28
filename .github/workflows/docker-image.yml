@@ -20,9 +20,9 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
       - name: Build and tag image
         run: |
-          docker build -t devopscu/frontend:latest .
+          docker build -t devopscu/backend:latest .
           docker images
-          docker push devopscu/frontend:latest
+          docker push devopscu/backend:latest
 
   deploy:
     name: Deploy to Server
@@ -39,5 +39,5 @@ jobs:
           script: |
             cd /backend
             docker-compose down
-            docker pull devopscu/frontend:latest
+            docker pull devopscu/backend:latest
             docker-compose up -d
